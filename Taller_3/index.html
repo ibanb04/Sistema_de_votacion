@@ -1,0 +1,133 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicie sesión  </title>
+  <link rel="stylesheet" href="fonts/animate.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <script defer src="js/fontawesome-all.js"></script>
+</head>
+<body>
+	<section>	
+      <div class="fondo">
+        <div class="hide-on-small-only"><br><br>
+        </div>
+     <div class="row">
+     	<div class="col m1 l7">
+     		<br>
+     		<br>
+     		<br><br>
+     		<br>
+     		<br>
+					<center>
+						<div class="white-text hide-on-med-and-down" >
+							<h3 class="grey-text lighten-4 tlt"><i>Bienvenido </i></h3>
+							<h1 class="white-text tlt">SISTEMA</h1>
+							<h2 class="white-text tlt">DE</h2>
+							<h2 class="white-text tlt">ADMINISTRADOR</h2>
+							
+						</div>
+					</center>
+		</div>
+     
+        <div class="col s12 m10 l4">
+        	<br>
+        	<br>
+        	<br>
+        	<br>
+        	<br>
+        	<br>
+        	<br>
+          <div class="card hoverable" style="background-color: rgba(255,255,255,.9);">
+            <div class="card-content center">
+              <div class="center-align"><b>LOGIN</b></div>
+              <!-- <form action=""> -->
+                <div class="input-field">
+                  <input type="number" name="cedula" id="cedula" required="required">
+                  <label for="cedula">Cedúla de ciudadania</label>
+                </div>
+                <div class="input-field">
+                  <input type="password" name="password" id="password" required="required">
+                  <label for="password">Contraseña</label>
+                </div>
+                <div class="center-align">
+                   <!-- Modal Trigger -->
+  	<a class="btn btn-large waves-effect waves-blue blue modal-trigger" onclick="login()" href="#modal1">INGRESAR</a>
+
+  <!-- Modal Structure -->
+ 		<div id="modal1" class="modal">
+    			<div class="modal-content">
+     				 <h5 id="mensaje"></h5>
+    				  
+   			    </div>
+   			 <div class="modal-footer">
+     			 <a href="#!" class="modal-action modal-close waves-effect waves-light btn-flat">Aceptar</a>
+  			 </div>
+  		</div>
+                 <!--  <button class="" onclick="login()"></button> -->
+                </div>
+                <br>
+                Problemas para iniciar? <a href="#">Olvide mi contraseña</a>
+              <!-- </form> -->
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  </body>
+  	<footer class="page-footer black">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m6 l6">
+					<h5>Sistemas de Votaciones 2018</h5>
+					<p style="font-weight: 200;"><big>Modulo de administradores</big></p>
+				</div>
+				<div class="col hide-on-small-only l2"></div>
+				<div class="col s12 m6 l4" style="line-height: 2;">
+					<h5>Developer</h5>
+            		<a class="grey-text text-lighten-2" href="https://www.facebook.com/ibanb04"><i class="fab fa-facebook fa-2x"></i> Ivan Bettin</a>
+            		
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+       <div class="row">
+        <div class="col l6">
+          <div class="left">Programacion Web</div>
+          <br>
+       <span> Universidad del Magdalena © 2018 Copyright Text</span>
+        </div>
+        <div class="col l6">
+          <div class="center"> <img src="images/logo55.png" style="height: 110px; width: 110px;"></div>
+        </div>
+      </div>
+			</div>
+		</div>
+	</footer>
+    
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
+    <script type="text/javascript" src="js/textillate.js"></script>
+    <script type="text/javascript" src="js/lettering.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            Materialize.updateTextFields();
+        });
+
+		$(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+		$('.modal').modal();
+	   });
+		$('.tlt').textillate();
+
+    </script>
+</body>
+</html>
