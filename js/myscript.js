@@ -41,7 +41,11 @@ str_segundo = new String(segundo);
 if (str_segundo.length == 1) {
 document.getElementById('segundo').innerHTML = '0' + segundo;
 }
+
 }
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var f=new Date();
+document.getElementById('fecha').innerHTML=f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
 
 		
 	
