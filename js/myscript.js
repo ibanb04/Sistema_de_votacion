@@ -1,33 +1,17 @@
-var usuarios = {
-	"123" : "123", 
-	"12345" : "pass2",
-	"123123123" : "pass3",
-	"1234" : "1234"
-};
 
-    function getJSON(){
-            $.ajax({
-                type: 'GET',
-                url: 'https://api.myjson.com/bins/9wp4b',
-                success: function(data){
-                    $.each(data, function(index, object){
-                        console.log(object.name);
-                    });
-                }
-            });
-        }
-getJSON();
 
+// No necesitas usar un servidor, para acceder al json solo usa la variable data que declare en el archivo data.js
 
 function login(){
-	id = document.getElementById("cedula").value;
+	idVotante = document.getElementById("cedula").value;
 	password = document.getElementById("password").value;
 
-	if (usuarios[id]){
-		if (usuarios[id] == password){
+	var index = data.dataVotacion.findIndex(obj=>obj.id==idVotante); // Busco el index del id que se dio en el vector
+
+	if (index != -1){ // si no encuentra el index entonces arroja -1
+		if (data.dataVotacion[index].password == password){
 			location.href ="pages/administrador.html";
 		}else{
-
 			document.getElementById("mensaje").innerHTML = "La conntraseña es incorrecta, por favor intente de nuevo!";
 		}
 	}else{
