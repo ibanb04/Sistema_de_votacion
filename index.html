@@ -25,7 +25,7 @@
           <br>
           <br>
   
-          <div class="card hoverable" style="background-color: rgba(255,255,255,.9);">
+          <div class="card hoverable" style="background-color: rgba(255,255,255,.9); display: none;" id="card-login">
             <div class="card-content center">
               <div class="center-align"><b><i class="fas fa-fire"></i> LOGIN</b></div>
               
@@ -39,7 +39,7 @@
                 </div>
                 <div class="center-align">
                    
-    <a class="btn btn-large waves-effect waves-blue blue modal-trigger" onclick="login()" href="#modal1">INGRESAR</a>
+    <a class="btn btn-large waves-effect waves-light blue modal-trigger pulse hoverable" onclick="login()" href="#modal1">INGRESAR</a>
 
       <div id="modal1" class="modal">
           <div class="modal-content">
@@ -105,11 +105,10 @@
     <script type="text/javascript">
         $(document).ready(function() {
             Materialize.updateTextFields();
-        });
-
-		$(document).ready(function(){
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-		$('.modal').modal();
+			$('.modal').modal();
+
+			$('#card-login').slideDown(2000);
 	   });
 
 

@@ -14,7 +14,7 @@ function login(){
 		}else if ((data.dataVotacion[index].password == password) && (data.dataVotacion[index].rol=="votante")){
 			location.href ="pages/targeton.html";
 		}else{
-			document.getElementById("mensaje").innerHTML = "La conntraseña es incorrecta, por favor intente de nuevo!";
+			$("#mensaje").html("<i class=\"fas fa-fire\"></i> La conntraseña es incorrecta, por favor intente de nuevo!");
 		}
 	}else{
 		document.getElementById("mensaje").innerHTML = "No se ha encontrado ningún ususario, por favor intente de nuevo!";
@@ -49,8 +49,11 @@ var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio",
 var f=new Date();
 document.getElementById('fecha').innerHTML=f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear();
 
-		
+// $(function(){
 	
+// });
+
+
 // var dataSet = [
 //     [ "Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$320,800" ],
 //     [ "Garrett Winters", "Accountant", "Tokyo", "8422", "2011/07/25", "$170,750" ],
