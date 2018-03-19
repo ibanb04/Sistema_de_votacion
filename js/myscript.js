@@ -9,8 +9,10 @@ function login(){
 	var index = data.dataVotacion.findIndex(obj=>obj.id==idVotante); // Busco el index del id que se dio en el vector
 
 	if (index != -1){ // si no encuentra el index entonces arroja -1
-		if (data.dataVotacion[index].password == password){
+		if ((data.dataVotacion[index].password == password) && (data.dataVotacion[index].rol=="jurado")){
 			location.href ="pages/administrador.html";
+		}else if ((data.dataVotacion[index].password == password) && (data.dataVotacion[index].rol=="votante")){
+			location.href ="pages/targeton.html";
 		}else{
 			document.getElementById("mensaje").innerHTML = "La conntraseña es incorrecta, por favor intente de nuevo!";
 		}

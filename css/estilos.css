@@ -13,7 +13,11 @@ background-image: url("../images/fondo.jpeg");
 	height: 100vh;
 }
 
-
+img.foto {
+	width: 120px;
+	height: 120px;
+	margin-right: 5px;
+}
 
 .waves-effect.waves-blue .waves-ripple {
   	background-color: rgba(54,106,225,.9);

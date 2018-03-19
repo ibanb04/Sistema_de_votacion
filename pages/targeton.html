@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Targeton</title>
+
+  <link rel="stylesheet" href="../css/materialize.css">
+  <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+  <script defer src="../js/fontawesome-all.js"></script>
+	<style>
+		body {
+			background-image: url("../images/swirl_pattern.png");
+		}
+	</style>
+</head>
+<body onload="cargarCandidatos(); votar();">
+	
+	<div class="container">
+		<div class="row">
+			<center><h4>VOTO PARA LA FÓRMULA	DE PRESIDENTE <br>Y VICEPRESIDENTE DE LA REPÚBLICA </h4></center>
+			
+		</div>
+		<div class="row" id="divListaCandidatos">
+			<div class="col s12 m4 l4">
+				<div id="partido0" class="card hoverable waves-effect blue-grey lighten-5" style="max-height:232px; width: 100%;" onclick="seleccionar(0)">
+					<div class="card-content center-align " style="padding: 15px;">
+						<img class="responsive-img"  src="../images/blanco.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="listModal">
+			<div class="col s12 m4 l6">
+			<div class="cancelar">
+				<div class="left">
+				
+				<a class="waves-effect waves-light btn-large black modal-trigger" href="#modal1">CANCELAR</a>
+				</div>
+  <!-- Modal Structure -->
+		<div id ="modal1" class="modal">
+			<div class ="modal-content">
+						<h5>ESTAS SEGURO?</h5>
+							
+    		</div>
+    		<div class="modal-footer">
+				
+				<a href ="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancelar</a>
+				<a href ="../index.html" class="modal-action modal-close waves-effect waves-blue btn-flat">Aceptar</a>
+    		</div>
+  		</div>
+			</div>
+
+				</div>
+		<div  class="col s12 m4 l6">
+			<div  id="votar" class="votar">
+				<!-- <div class="right">
+					<a class="waves-effect waves-light btn-large blue modal-trigger" href="#modal2" onclick= "votar()">VOTAR</a>
+  				</div>
+ 
+				<div id ="modal2" class="modal">
+			<div class ="modal-content">
+				<h5>ESTAS SEGURO?...</h5>
+				<p id="confirmarVoto"></p>
+    		</div>
+    		<div class="modal-footer">
+				
+				<a href ="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Cancelar</a>
+				<a href ="certificadoElectoral.html" class="modal-action modal-close waves-effect waves-blue btn-flat">Aceptar</a>
+    		</div>
+  		</div> -->
+		</div>
+			</div>
+
+			<!--
+				<button class="btn waves-effect waves-blue btn-large blue lighten-1" onclick="votar()">COMFIRMAR VOTO <i class="fas fa-check fa-lg"></i> </button> -->
+		</div>
+	
+	</div>
+	<br><br>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/materialize.js"></script>
+	<script type="text/javascript" src="../js/script1.js"></script>
+
+	<script>
+		$(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+		$('.modal').modal();
+	});
+	</script>
+</body>
+</html>
