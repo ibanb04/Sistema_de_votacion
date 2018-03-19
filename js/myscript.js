@@ -21,11 +21,11 @@ function login(){
 
 Reloj();
 function Reloj() {
-var tiempo = new Date();
-var hora = tiempo.getHours();
-var minuto = tiempo.getMinutes();
-var segundo = tiempo.getSeconds();
-document.getElementById('hora').innerHTML = hora;
+	var tiempo = new Date();
+	var hora = tiempo.getHours();
+	var minuto = tiempo.getMinutes();
+	var segundo = tiempo.getSeconds();
+	document.getElementById('hora').innerHTML = hora;
 document.getElementById('minuto').innerHTML = minuto;
 document.getElementById('segundo').innerHTML = segundo;
 setTimeout('Reloj()', 1000);
